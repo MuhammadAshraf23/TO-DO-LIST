@@ -15,13 +15,14 @@
 // let list = document.getElementById('list');
 // list.innerHTML=" "
 // }
+  let input = document.getElementById('input');
+  let list = document.getElementById('list');
 function todo() {
-    let input = document.getElementById('input');
-    let list = document.getElementById('list');
-    
     let li = document.createElement('li');
     li.innerText = input.value;
-    
+function DeleteAll() {
+    list.innerHTML = "";
+  }
     let editBtn = document.createElement('button');
     editBtn.innerHTML = 'Edit';
     editBtn.addEventListener('click', function() {
@@ -50,8 +51,5 @@ function todo() {
     li.remove();
   }
   
-  function DeleteAll() {
-    let list = document.getElementById('list');
-    list.innerHTML = "";
-  }
+
   
