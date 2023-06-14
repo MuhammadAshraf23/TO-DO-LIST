@@ -20,9 +20,7 @@
 function todo() {
     let li = document.createElement('li');
     li.innerText = input.value;
-function DeleteAll() {
-    list.innerHTML = "";
-  }
+
     let editBtn = document.createElement('button');
     editBtn.innerHTML = 'Edit';
     editBtn.addEventListener('click', function() {
@@ -38,10 +36,11 @@ function DeleteAll() {
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
     list.appendChild(li);
-    
     input.value = "";
   }
-  
+  function DeleteAll() {
+    list.innerHTML = "";
+  }
   function edit(li) {
     let newText = prompt("Enter new text");
     li.firstChild.textContent = newText;
